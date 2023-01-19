@@ -113,20 +113,22 @@ export default function CardForm(props) {
           values.temaVideo +
           "%0a%0a2. Tema Undangan Website : " +
           values.temaWebsite +
-          "%0a%0a3. Paket Undangan Video/Jpeg : " +
+          "%0a%0a3. Bahasa Undangan : " +
+          values.bahasa +
+          "%0a%0a4. Paket Undangan Video/Jpeg : " +
           values.paketVideo +
-          "%0a%0a4. Paket Undangan Website : " +
+          "%0a%0a5. Paket Undangan Website : " +
           values.paketWebsite +
-          "%0a%0a4. Penggunaan Foto : " +
+          "%0a%0a6. Penggunaan Foto : " +
           values.foto +
-          "%0a%0a5. Nama yang didahulukan : " +
+          "%0a%0a7. Nama yang didahulukan : " +
           values.namaAwal +
-          "%0a%0a6. Barcode : " +
+          "%0a%0a8. Barcode : " +
           values.barcode +
           lBarcode +
-          "%0a%0a7. Denah : " +
+          "%0a%0a9. Denah : " +
           values.denah +
-          "%0a%0a6. Mempelai Wanita %0a-Nama Panggilan " +
+          "%0a%0a10. Mempelai Wanita %0a-Nama Panggilan " +
           values.panggilanWanita +
           "%0a-Nama Lengkap : " +
           values.lengkapWanita +
@@ -136,7 +138,7 @@ export default function CardForm(props) {
           values.namaBapakWanita +
           " dan Ibu " +
           values.namaIbuWanita +
-          "%0a%0a7. Mempelai Pria %0a-Nama Panggilan : " +
+          "%0a%0a11. Mempelai Pria %0a-Nama Panggilan : " +
           values.panggilanPria +
           "%0a-Nama Lengkap : " +
           values.lengkapPria +
@@ -146,7 +148,7 @@ export default function CardForm(props) {
           values.namaBapakPria +
           " dan Ibu " +
           values.namaIbuPria +
-          "%0a%0a8. Rincian Acara %0a-Acara 1 " +
+          "%0a%0a12. Rincian Acara %0a-Acara 1 " +
           data +
           "%0a-Hari, Tanggal Bulan Tahun : " +
           values.hariAkad +
@@ -174,7 +176,7 @@ export default function CardForm(props) {
           values.tempatResepsi +
           "%0a-Maps acara : " +
           values.mapsResepsi +
-          "%0a%0a9. Musik : " +
+          "%0a%0a13. Musik : " +
           values.musik +
           "%0a%0aData Tambahan Paket Gold %0a%0a1. Love Story : " +
           temp +
@@ -198,7 +200,7 @@ export default function CardForm(props) {
           values.namaPenerimaVideo +
           "%0a-WA Konfirmasi Amplop/Penerima : " +
           values.waKonfirmasiVideo +
-          "%0a%0a3. Wedding Gift %0a%0a-Amplop Digital 1%0a-Nomor Rekening 1 : " +
+          "%0a%0a Wedding Gift %0a%0a-Amplop Digital 1%0a-Nomor Rekening 1 : " +
           values.nomorRek +
           "%0a-Nama Bank 1 : " +
           values.namaBank +
@@ -216,10 +218,10 @@ export default function CardForm(props) {
           values.namaPenerima +
           "%0a-WA Konfirmasi Amplop/Penerima : " +
           values.waKonfirmasi +
-          "%0a%0a4. Reservasi Kehadiran via WA : " +
+          "%0a%0a14. Reservasi Kehadiran via WA : " +
           values.daftarHadir +
           noCatin +
-          "%0a%0a5. QR Code RSVP : " +
+          "%0a%0a15. QR Code RSVP : " +
           values.rsvp;
       } else {
         window.location.href =
@@ -228,20 +230,22 @@ export default function CardForm(props) {
           values.temaVideo +
           "%0a%0a2. Tema Undangan Website: " +
           values.temaWebsite +
-          "%0a%0a3. Paket Undangan Video/Jpeg : " +
+          "%0a%0a3. Bahasa Undangan: " +
+          values.bahasa +
+          "%0a%0a4. Paket Undangan Video/Jpeg : " +
           values.paketVideo +
-          "%0a%0a4. Paket Undangan Website : " +
+          "%0a%0a5. Paket Undangan Website : " +
           values.paketWebsite +
-          "%0a%0a4. Penggunaan Foto : " +
+          "%0a%0a6. Penggunaan Foto : " +
           values.foto +
-          "%0a%0a5. Nama yang didahulukan : " +
+          "%0a%0a7. Nama yang didahulukan : " +
           values.namaAwal +
-          "%0a%0a6. Barcode : " +
+          "%0a%0a8. Barcode : " +
           values.barcode +
           lBarcode +
-          "%0a%0a7. Denah : " +
+          "%0a%0a9. Denah : " +
           values.denah +
-          "%0a%0a6. Mempelai Wanita %0a-Nama Panggilan " +
+          "%0a%0a10. Mempelai Wanita %0a-Nama Panggilan " +
           values.panggilanWanita +
           "%0a-Nama Lengkap : " +
           values.lengkapWanita +
@@ -251,7 +255,7 @@ export default function CardForm(props) {
           values.namaBapakWanita +
           " dan Ibu " +
           values.namaIbuWanita +
-          "%0a%0a7. Mempelai Pria %0a-Nama Panggilan : " +
+          "%0a%0a11. Mempelai Pria %0a-Nama Panggilan : " +
           values.panggilanPria +
           "%0a-Nama Lengkap : " +
           values.lengkapPria +
@@ -261,7 +265,7 @@ export default function CardForm(props) {
           values.namaBapakPria +
           " dan Ibu " +
           values.namaIbuPria +
-          "%0a%0a8. Rincian Acara %0a-Acara 1" +
+          "%0a%0a12. Rincian Acara %0a-Acara 1" +
           data +
           "%0a-Hari, Tanggal Bulan Tahun : " +
           values.hariAkad +
@@ -289,7 +293,7 @@ export default function CardForm(props) {
           values.tempatResepsi +
           "%0a-Maps acara : " +
           values.mapsResepsi +
-          "%0a%0a9. Musik : " +
+          "%0a%0a13. Musik : " +
           values.musik;
       }
     }
@@ -497,6 +501,25 @@ export default function CardForm(props) {
                   </Form.Select>
                   <Form.Control.Feedback type="invalid">
                     Tema Belum Dipilih
+                  </Form.Control.Feedback>
+                </Form.Group>
+
+                <Form.Group className="mb-2">
+                  <Form.Label className="labelForm">Bahasa Undangan</Form.Label>
+                  <Form.Select
+                    name="bahasa"
+                    value={values.bahasa}
+                    onChange={handleInputChange}
+                    required
+                  >
+                    <option value="" disabled hidden>
+                      Silakan Pilih Bahasa
+                    </option>
+                    <option value="Indonesia">Indonesia</option>
+                    <option value="Inggris">Inggris</option>
+                  </Form.Select>
+                  <Form.Control.Feedback type="invalid">
+                    Bahasa Belum Dipilih
                   </Form.Control.Feedback>
                 </Form.Group>
 
