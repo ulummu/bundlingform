@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/bundlingform/static/css/main.e91f926c.css",
-    "main.js": "/bundlingform/static/js/main.62df13b4.js",
+    "main.js": "/bundlingform/static/js/main.a9f6cd13.js",
     "static/media/bootstrap-icons.woff?": "/bundlingform/static/media/bootstrap-icons.6959d0d983ee318f8880.woff",
     "static/media/bootstrap-icons.woff2?": "/bundlingform/static/media/bootstrap-icons.b2e5aab643c6f0fd2da6.woff2",
     "static/media/logo.png": "/bundlingform/static/media/logo.9b82798ec2ffe923f745.png",
     "index.html": "/bundlingform/index.html",
     "main.e91f926c.css.map": "/bundlingform/static/css/main.e91f926c.css.map",
-    "main.62df13b4.js.map": "/bundlingform/static/js/main.62df13b4.js.map"
+    "main.a9f6cd13.js.map": "/bundlingform/static/js/main.a9f6cd13.js.map"
   },
   "entrypoints": [
     "static/css/main.e91f926c.css",
-    "static/js/main.62df13b4.js"
+    "static/js/main.a9f6cd13.js"
   ]
 }
