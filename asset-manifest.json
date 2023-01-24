@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/bundlingform/static/css/main.ba1f7987.css",
-    "main.js": "/bundlingform/static/js/main.e91a2405.js",
+    "main.css": "/bundlingform/static/css/main.e91f926c.css",
+    "main.js": "/bundlingform/static/js/main.62df13b4.js",
     "static/media/bootstrap-icons.woff?": "/bundlingform/static/media/bootstrap-icons.6959d0d983ee318f8880.woff",
     "static/media/bootstrap-icons.woff2?": "/bundlingform/static/media/bootstrap-icons.b2e5aab643c6f0fd2da6.woff2",
     "static/media/logo.png": "/bundlingform/static/media/logo.9b82798ec2ffe923f745.png",
     "index.html": "/bundlingform/index.html",
-    "main.ba1f7987.css.map": "/bundlingform/static/css/main.ba1f7987.css.map",
-    "main.e91a2405.js.map": "/bundlingform/static/js/main.e91a2405.js.map"
+    "main.e91f926c.css.map": "/bundlingform/static/css/main.e91f926c.css.map",
+    "main.62df13b4.js.map": "/bundlingform/static/js/main.62df13b4.js.map"
   },
   "entrypoints": [
-    "static/css/main.ba1f7987.css",
-    "static/js/main.e91a2405.js"
+    "static/css/main.e91f926c.css",
+    "static/js/main.62df13b4.js"
   ]
 }
