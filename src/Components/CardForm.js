@@ -466,38 +466,19 @@ export default function CardForm(props) {
                       Silakan Pilih Tema
                     </option>
                     <option value="Tema 01">Tema 01</option>
-                    <option value="Tema AA">Tema AA</option>
-                    <option value="Tema AB">Tema AB</option>
-                    <option value="Tema AC">Tema AC</option>
-                    <option value="Tema AD">Tema AD</option>
                     <option value="Tema AE">Tema AE</option>
-                    <option value="Tema A">Tema A</option>
-                    <option value="Tema B">Tema B</option>
-                    <option value="Tema C">Tema C</option>
-                    <option value="Tema D">Tema D</option>
-                    <option value="Tema E">Tema E</option>
-                    <option value="Tema F">Tema F</option>
-                    <option value="Tema G">Tema G</option>
-                    <option value="Tema H">Tema H</option>
-                    <option value="Tema I">Tema I</option>
-                    <option value="Tema J">Tema J</option>
-                    <option value="Tema K">Tema K</option>
-                    <option value="Tema L">Tema L</option>
-                    <option value="Tema M">Tema M</option>
-                    <option value="Tema N">Tema N</option>
-                    <option value="Tema O">Tema O</option>
+                    <option value="Tema AD">Tema AD</option>
+                    <option value="Tema AC">Tema AC</option>
+                    <option value="Tema AA">Tema AA</option>
                     <option value="Tema P">Tema P</option>
                     <option value="Tema Q">Tema Q</option>
                     <option value="Tema W">Tema W</option>
                     <option value="Tema X">Tema X</option>
                     <option value="Tema Y">Tema Y</option>
                     <option value="Tema Z">Tema Z</option>
-                    <option value="Tema JAWA 02">Tema JAWA 02</option>
-                    <option value="Tema BATAK">Tema BATAK</option>
-                    <option value="Tema LAMA">Tema LAMA</option>
-                    <option value="Tema AQ1">Tema AQ1</option>
-                    <option value="Tema AQ2">Tema AQ2</option>
-                    <option value="Tema AQ3">Tema AQ3</option>
+                    <option value="Tema Jawa">Tema Jawa</option>
+                    <option value="Tema Minang">Tema Minang</option>
+                    <option value="Tema Aqiqah">Tema Aqiqah</option>
                   </Form.Select>
                   <Form.Control.Feedback type="invalid">
                     Tema Belum Dipilih
@@ -539,17 +520,17 @@ export default function CardForm(props) {
                     <option value="Gambar/Jpeg">Gambar/Jpeg</option>
                     <option value="Video 30/15 detik">Video 30/15 detik</option>
                     <option value="Video 60 detik">Video 60 detik</option>
-                    <option value="Paket Hemat 1 (Video 60 detik + Jpeg)">
-                      Paket Hemat 1 (Video 60 detik + Jpeg)
+                    <option value="Paket Hemat 1 (Video 60 detik dan Jpeg)">
+                      Paket Hemat 1 (Video 60 detik & Jpeg)
                     </option>
-                    <option value="Paket Hemat 2 (Video 60 detik + Video 30/15 detik)">
-                      Paket Hemat 2 (Video 60 detik + Video 30/15 detik)
+                    <option value="Paket Hemat 2 (Video 60 detik dan Video 30/15 detik)">
+                      Paket Hemat 2 (Video 60 detik & Video 30/15 detik)
                     </option>
-                    <option value="Paket Hemat 3 (Video 60 detik + Video 30/15 detik)">
-                      Paket Hemat 3 (Video 60 detik + Video 30/15 detik + Jpeg)
+                    <option value="Paket Hemat 3 (Video 60 detik dan Video 30/15 detik dan Jpeg)">
+                      Paket Hemat 3 (Video 60 detik & Video 30/15 detik & Jpeg)
                     </option>
-                    <option value="Paket Hemat 4 (Video 30/15 detik)">
-                      Paket Hemat 4 (Video 30/15 detik + Jpeg)
+                    <option value="Paket Hemat 4 (Video 30/15 detik dan Jpeg)">
+                      Paket Hemat 4 (Video 30/15 detik & Jpeg)
                     </option>
                   </Form.Select>
                   <Form.Control.Feedback type="invalid">
@@ -642,23 +623,36 @@ export default function CardForm(props) {
                     Barcode Belum Dipilih
                   </Form.Control.Feedback>
                   {visibleBarcode && (
-                    <FloatingLabel
-                      controlId="floatingInput"
-                      label="Link Barcode "
-                      className="formTambah mt-3"
-                    >
-                      <Form.Control
-                        name="linkBarcode"
-                        value={values.linkBarcode}
-                        onChange={handleInputChange}
-                        required
-                        type="text"
-                        placeholder="Masukan Link"
-                      />
-                      <Form.Control.Feedback type="invalid">
-                        Link Belum Diisi
-                      </Form.Control.Feedback>
-                    </FloatingLabel>
+                    <>
+                      <FloatingLabel
+                        controlId="floatingInput"
+                        label="Link Barcode "
+                        className="formTambah mt-3"
+                      >
+                        <Form.Control
+                          name="linkBarcode"
+                          value={values.linkBarcode}
+                          onChange={handleInputChange}
+                          required
+                          type="text"
+                          placeholder="Masukan Link"
+                        />
+                        <Form.Control.Feedback type="invalid">
+                          Link Belum Diisi
+                        </Form.Control.Feedback>
+                      </FloatingLabel>
+                      <Form.Label className="labelTutor">
+                        Tutorial Salin Backsound{" "}
+                        <a
+                          className="tutor"
+                          href="https://www.youtube.com/watch?v=07ihVwltHvQ"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          Klik Disini
+                        </a>
+                      </Form.Label>
+                    </>
                   )}
                 </Form.Group>
 
@@ -1064,7 +1058,7 @@ export default function CardForm(props) {
                               Tutorial Salin Maps{" "}
                               <a
                                 className="tutor"
-                                href="https://google.com"
+                                href="https://www.youtube.com/watch?v=07ihVwltHvQ"
                                 target="_blank"
                                 rel="noopener noreferrer"
                               >
@@ -1236,7 +1230,7 @@ export default function CardForm(props) {
                               Tutorial Salin Maps{" "}
                               <a
                                 className="tutor"
-                                href="https://google.com"
+                                href="https://www.youtube.com/watch?v=07ihVwltHvQ"
                                 target="_blank"
                                 rel="noopener noreferrer"
                               >
@@ -1277,7 +1271,7 @@ export default function CardForm(props) {
                         Tutorial Salin Backsound{" "}
                         <a
                           className="tutor"
-                          href="https://google.com"
+                          href="https://www.youtube.com/watch?v=DmWVqg3mfps"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
