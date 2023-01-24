@@ -428,21 +428,23 @@ export default function CardForm(props) {
                     <option value="Tema F">Tema F</option>
                     <option value="Tema G">Tema G</option>
                     <option value="Tema H">Tema H</option>
-                    <option value="Tema I">Tema I</option>
                     <option value="Tema J">Tema J</option>
                     <option value="Tema K">Tema K</option>
                     <option value="Tema L">Tema L</option>
                     <option value="Tema M">Tema M</option>
                     <option value="Tema N">Tema N</option>
-                    <option value="Tema O">Tema O</option>
                     <option value="Tema P">Tema P</option>
                     <option value="Tema Q">Tema Q</option>
+                    <option value="Tema R">Tema R</option>
+                    <option value="Tema S">Tema S</option>
+                    <option value="Tema T">Tema T</option>
+                    <option value="Tema V">Tema V</option>
                     <option value="Tema W">Tema W</option>
                     <option value="Tema X">Tema X</option>
                     <option value="Tema Y">Tema Y</option>
                     <option value="Tema Z">Tema Z</option>
                     <option value="Tema JAWA 02">Tema JAWA 02</option>
-                    <option value="Tema BATAK">Tema BATAK</option>
+                    <option value="Tema W BATAK">Tema W BATAK</option>
                     <option value="Tema LAMA">Tema LAMA</option>
                     <option value="Tema AQ1">Tema AQ1</option>
                     <option value="Tema AQ2">Tema AQ2</option>
@@ -642,7 +644,7 @@ export default function CardForm(props) {
                         </Form.Control.Feedback>
                       </FloatingLabel>
                       <Form.Label className="labelTutor">
-                        Tutorial Salin Backsound{" "}
+                        Tutorial Salin Barcode{" "}
                         <a
                           className="tutor"
                           href="https://www.youtube.com/watch?v=07ihVwltHvQ"
