@@ -727,7 +727,7 @@ export default function CardForm(props) {
                             </FloatingLabel>
                             <FloatingLabel
                               controlId="floatingInput"
-                              label="Anak ..."
+                              label="Putri ..."
                               className="mb-1"
                             >
                               <Form.Control
@@ -824,7 +824,7 @@ export default function CardForm(props) {
                             </FloatingLabel>
                             <FloatingLabel
                               controlId="floatingInput"
-                              label="Anak ..."
+                              label="Putra ..."
                               className="mb-1"
                             >
                               <Form.Control
@@ -1471,7 +1471,7 @@ export default function CardForm(props) {
                                         className="mb-3"
                                       >
                                         <Form.Control
-                                          name="namaPenerima"
+                                          name="namaPenerimaVideo"
                                           value={capitalFirstWord(
                                             values.namaPenerimaVideo
                                           )}
