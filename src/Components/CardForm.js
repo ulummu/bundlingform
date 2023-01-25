@@ -367,7 +367,7 @@ export default function CardForm(props) {
       setNoCatin("%0a-Nomor Calon Pengantin : " + values.nomorCatin);
     }
     if (!!values.linkBarcode) {
-      setLBarcode("%0a-linkBarcode : " + values.linkBarcode);
+      setLBarcode("%0a-Link Barcode : " + values.linkBarcode);
     }
     if (dataGold === 1) {
       setTemp(encodeURI(values.loveStory));
