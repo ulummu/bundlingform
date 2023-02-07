@@ -415,11 +415,16 @@ export default function CardForm(props) {
                       Silakan Pilih Tema
                     </option>
                     <option value="Tema 01">Tema 01</option>
+                    <option value="Tema 02">Tema 02</option>
+                    <option value="Tema 03">Tema 03</option>
+                    <option value="Tema 04">Tema 04</option>
                     <option value="Tema AA">Tema AA</option>
                     <option value="Tema AB">Tema AB</option>
                     <option value="Tema AC">Tema AC</option>
                     <option value="Tema AD">Tema AD</option>
                     <option value="Tema AE">Tema AE</option>
+                    <option value="Tema AF">Tema AF</option>
+                    <option value="Tema AG">Tema AG</option>
                     <option value="Tema A">Tema A</option>
                     <option value="Tema B">Tema B</option>
                     <option value="Tema C">Tema C</option>
@@ -468,6 +473,11 @@ export default function CardForm(props) {
                       Silakan Pilih Tema
                     </option>
                     <option value="Tema 01">Tema 01</option>
+                    <option value="Tema 02">Tema 02</option>
+                    <option value="Tema 03">Tema 03</option>
+                    <option value="Tema 04">Tema 04</option>
+                    <option value="Tema AG">Tema AG</option>
+                    <option value="Tema AF">Tema AF</option>
                     <option value="Tema AE">Tema AE</option>
                     <option value="Tema AD">Tema AD</option>
                     <option value="Tema AC">Tema AC</option>
@@ -520,19 +530,19 @@ export default function CardForm(props) {
                       Silakan Pilih Paket
                     </option>
                     <option value="Gambar/Jpeg">Gambar/Jpeg</option>
-                    <option value="Video 30/15 detik">Video 30/15 detik</option>
+                    <option value="Video 15/30 detik">Video 15/30 detik</option>
                     <option value="Video 60 detik">Video 60 detik</option>
-                    <option value="Paket Hemat 1 (Video 60 detik dan Jpeg)">
-                      Paket Hemat 1 (Video 60 detik & Jpeg)
+                    <option value="Paket Hemat 1 (Video 15/30 detik dan Jpeg)">
+                      Paket Hemat 1 (Video 15/30 detik & Jpeg)
                     </option>
-                    <option value="Paket Hemat 2 (Video 60 detik dan Video 30/15 detik)">
-                      Paket Hemat 2 (Video 60 detik & Video 30/15 detik)
+                    <option value="Paket Hemat 2 (Video 60 detik dan Jpeg)">
+                      Paket Hemat 2 (Video 60 detik & Jpeg)
                     </option>
-                    <option value="Paket Hemat 3 (Video 60 detik dan Video 30/15 detik dan Jpeg)">
-                      Paket Hemat 3 (Video 60 detik & Video 30/15 detik & Jpeg)
+                    <option value="Paket Hemat 3 (Video 60 detik dan Video 15/30 detik)">
+                      Paket Hemat 3 (Video 60 detik & Video 15/30 detik)
                     </option>
-                    <option value="Paket Hemat 4 (Video 30/15 detik dan Jpeg)">
-                      Paket Hemat 4 (Video 30/15 detik & Jpeg)
+                    <option value="Paket Hemat 4 (Video 60 detik dan Video 15/30 detik dan Jpeg)">
+                      Paket Hemat 4 (Video 60 detik & Video 15/30 detik & Jpeg)
                     </option>
                   </Form.Select>
                   <Form.Control.Feedback type="invalid">
