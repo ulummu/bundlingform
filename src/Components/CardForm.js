@@ -75,6 +75,9 @@ const initialValues = {
   rsvp: "",
   waKonfirmasi: "",
   waKonfirmasiVideo: "",
+  pakaiFilter: "",
+  filterig: "",
+  frame: "",
 };
 export default function CardForm(props) {
   const [validated, setValidated] = useState(false);
@@ -84,12 +87,14 @@ export default function CardForm(props) {
   const [visibleGold, setVisibleGold] = useState(false);
   const [visibleAkad, setVisibleAkad] = useState(false);
   const [visibleResepsi, setVisibleResepsi] = useState(false);
+  const [visibleFilter, setVisibleFilter] = useState(false);
   const [data, setData] = useState("");
   const [lBarcode, setLBarcode] = useState("");
   const [noCatin, setNoCatin] = useState("");
   const [dataResepsi, setDataResepsi] = useState("");
   const [dataGold, setDataGold] = useState(0);
   const [temp, setTemp] = useState("");
+  const [filter, setFilter] = useState("");
 
   // const capitalize = (s) =>
   //   s.charAt(0).toUpperCase() + s.slice(1).toLowerCase();
@@ -119,16 +124,19 @@ export default function CardForm(props) {
           values.paketVideo +
           "%0a%0a5. Paket Undangan Website : " +
           values.paketWebsite +
-          "%0a%0a6. Penggunaan Foto : " +
+          "%0a%0a6. Filter Instagram : " +
+          values.pakaiFilter +
+          filter +
+          "%0a%0a7. Penggunaan Foto : " +
           values.foto +
-          "%0a%0a7. Nama yang didahulukan : " +
+          "%0a%0a8. Nama yang didahulukan : " +
           values.namaAwal +
-          "%0a%0a8. Barcode : " +
+          "%0a%0a9. Barcode : " +
           values.barcode +
           lBarcode +
-          "%0a%0a9. Denah : " +
+          "%0a%0a10. Denah : " +
           values.denah +
-          "%0a%0a10. Mempelai Wanita %0a-Nama Panggilan " +
+          "%0a%0a11. Mempelai Wanita %0a-Nama Panggilan " +
           values.panggilanWanita +
           "%0a-Nama Lengkap : " +
           values.lengkapWanita +
@@ -138,7 +146,7 @@ export default function CardForm(props) {
           values.namaBapakWanita +
           " dan Ibu " +
           values.namaIbuWanita +
-          "%0a%0a11. Mempelai Pria %0a-Nama Panggilan : " +
+          "%0a%0a12. Mempelai Pria %0a-Nama Panggilan : " +
           values.panggilanPria +
           "%0a-Nama Lengkap : " +
           values.lengkapPria +
@@ -148,7 +156,7 @@ export default function CardForm(props) {
           values.namaBapakPria +
           " dan Ibu " +
           values.namaIbuPria +
-          "%0a%0a12. Rincian Acara %0a-Acara 1 " +
+          "%0a%0a13. Rincian Acara %0a-Acara 1 " +
           data +
           "%0a-Hari, Tanggal Bulan Tahun : " +
           values.hariAkad +
@@ -176,7 +184,7 @@ export default function CardForm(props) {
           values.tempatResepsi +
           "%0a-Maps acara : " +
           values.mapsResepsi +
-          "%0a%0a13. Musik : " +
+          "%0a%0a14. Musik : " +
           values.musik +
           "%0a%0aData Tambahan Paket Gold %0a%0a1. Love Story : " +
           temp +
@@ -236,16 +244,19 @@ export default function CardForm(props) {
           values.paketVideo +
           "%0a%0a5. Paket Undangan Website : " +
           values.paketWebsite +
-          "%0a%0a6. Penggunaan Foto : " +
+          "%0a%0a6. Filter Instagram : " +
+          values.pakaiFilter +
+          filter +
+          "%0a%0a7. Penggunaan Foto : " +
           values.foto +
-          "%0a%0a7. Nama yang didahulukan : " +
+          "%0a%0a8. Nama yang didahulukan : " +
           values.namaAwal +
-          "%0a%0a8. Barcode : " +
+          "%0a%0a9. Barcode : " +
           values.barcode +
           lBarcode +
-          "%0a%0a9. Denah : " +
+          "%0a%0a10. Denah : " +
           values.denah +
-          "%0a%0a10. Mempelai Wanita %0a-Nama Panggilan " +
+          "%0a%0a11. Mempelai Wanita %0a-Nama Panggilan " +
           values.panggilanWanita +
           "%0a-Nama Lengkap : " +
           values.lengkapWanita +
@@ -255,7 +266,7 @@ export default function CardForm(props) {
           values.namaBapakWanita +
           " dan Ibu " +
           values.namaIbuWanita +
-          "%0a%0a11. Mempelai Pria %0a-Nama Panggilan : " +
+          "%0a%0a12. Mempelai Pria %0a-Nama Panggilan : " +
           values.panggilanPria +
           "%0a-Nama Lengkap : " +
           values.lengkapPria +
@@ -265,7 +276,7 @@ export default function CardForm(props) {
           values.namaBapakPria +
           " dan Ibu " +
           values.namaIbuPria +
-          "%0a%0a12. Rincian Acara %0a-Acara 1" +
+          "%0a%0a13. Rincian Acara %0a-Acara 1" +
           data +
           "%0a-Hari, Tanggal Bulan Tahun : " +
           values.hariAkad +
@@ -293,7 +304,7 @@ export default function CardForm(props) {
           values.tempatResepsi +
           "%0a-Maps acara : " +
           values.mapsResepsi +
-          "%0a%0a13. Musik : " +
+          "%0a%0a14. Musik : " +
           values.musik;
       }
     }
@@ -320,6 +331,11 @@ export default function CardForm(props) {
     } else if (e.target.name === "daftarHadir" && e.target.value === "Tidak") {
       setVisible(false);
       setNoCatin("");
+    }
+    if (e.target.name === "pakaiFilter" && e.target.value === "Iya") {
+      setVisibleFilter(!visible);
+    } else if (e.target.name === "pakaiFilter" && e.target.value === "Tidak") {
+      setVisibleFilter(false);
     }
     if (e.target.name === "barcode" && e.target.value === "Iya") {
       setVisibleBarcode(!visible);
@@ -376,6 +392,14 @@ export default function CardForm(props) {
         [name]: value,
       });
     }
+    if (!!values.filterig) {
+      setFilter(
+        "%0a-Tema Filter Instagram : " +
+          values.filterig +
+          "%0a-Frame : " +
+          values.frame
+      );
+    }
     setValues({
       ...values,
       [name]: value,
@@ -414,17 +438,6 @@ export default function CardForm(props) {
                     <option value="" hidden>
                       Silakan Pilih Tema
                     </option>
-                    <option value="Tema 01">Tema 01</option>
-                    <option value="Tema 02">Tema 02</option>
-                    <option value="Tema 03">Tema 03</option>
-                    <option value="Tema 04">Tema 04</option>
-                    <option value="Tema AA">Tema AA</option>
-                    <option value="Tema AB">Tema AB</option>
-                    <option value="Tema AC">Tema AC</option>
-                    <option value="Tema AD">Tema AD</option>
-                    <option value="Tema AE">Tema AE</option>
-                    <option value="Tema AF">Tema AF</option>
-                    <option value="Tema AG">Tema AG</option>
                     <option value="Tema A">Tema A</option>
                     <option value="Tema B">Tema B</option>
                     <option value="Tema C">Tema C</option>
@@ -448,12 +461,23 @@ export default function CardForm(props) {
                     <option value="Tema X">Tema X</option>
                     <option value="Tema Y">Tema Y</option>
                     <option value="Tema Z">Tema Z</option>
-                    <option value="Tema JAWA 02">Tema JAWA 02</option>
-                    <option value="Tema W BATAK">Tema W BATAK</option>
-                    <option value="Tema LAMA">Tema LAMA</option>
+                    <option value="Tema AA">Tema AA</option>
+                    <option value="Tema AB">Tema AB</option>
+                    <option value="Tema AC">Tema AC</option>
+                    <option value="Tema AD">Tema AD</option>
+                    <option value="Tema AE">Tema AE</option>
+                    <option value="Tema AF">Tema AF</option>
+                    <option value="Tema AG">Tema AG</option>
+                    <option value="Tema 01">Tema 01</option>
+                    <option value="Tema 02">Tema 02</option>
+                    <option value="Tema 03">Tema 03</option>
+                    <option value="Tema 04">Tema 04</option>
                     <option value="Tema AQ1">Tema AQ1</option>
                     <option value="Tema AQ2">Tema AQ2</option>
                     <option value="Tema AQ3">Tema AQ3</option>
+                    <option value="Tema JAWA 02">Tema JAWA 02</option>
+                    <option value="Tema W BATAK">Tema W BATAK</option>
+                    <option value="Tema LAMA">Tema LAMA</option>
                   </Form.Select>
                   <Form.Control.Feedback type="invalid">
                     Tema Belum Dipilih
@@ -472,22 +496,22 @@ export default function CardForm(props) {
                     <option value="" hidden>
                       Silakan Pilih Tema
                     </option>
-                    <option value="Tema 01">Tema 01</option>
-                    <option value="Tema 02">Tema 02</option>
-                    <option value="Tema 03">Tema 03</option>
-                    <option value="Tema 04">Tema 04</option>
-                    <option value="Tema AG">Tema AG</option>
-                    <option value="Tema AF">Tema AF</option>
-                    <option value="Tema AE">Tema AE</option>
-                    <option value="Tema AD">Tema AD</option>
-                    <option value="Tema AC">Tema AC</option>
-                    <option value="Tema AA">Tema AA</option>
                     <option value="Tema P">Tema P</option>
                     <option value="Tema Q">Tema Q</option>
                     <option value="Tema W">Tema W</option>
                     <option value="Tema X">Tema X</option>
                     <option value="Tema Y">Tema Y</option>
                     <option value="Tema Z">Tema Z</option>
+                    <option value="Tema AA">Tema AA</option>
+                    <option value="Tema AC">Tema AC</option>
+                    <option value="Tema AD">Tema AD</option>
+                    <option value="Tema AE">Tema AE</option>
+                    <option value="Tema AF">Tema AF</option>
+                    <option value="Tema AG">Tema AG</option>
+                    <option value="Tema 01">Tema 01</option>
+                    <option value="Tema 02">Tema 02</option>
+                    <option value="Tema 03">Tema 03</option>
+                    <option value="Tema 04">Tema 04</option>
                     <option value="Tema Jawa">Tema Jawa</option>
                     <option value="Tema Minang">Tema Minang</option>
                     <option value="Tema Aqiqah">Tema Aqiqah</option>
@@ -571,6 +595,119 @@ export default function CardForm(props) {
                     Paket Belum Dipilih
                   </Form.Control.Feedback>
                 </Form.Group>
+
+                <Form.Group>
+                  <Form.Label>Filter Instagram</Form.Label>
+                  <Form.Select
+                    name="pakaiFilter"
+                    value={values.pakaiFilter}
+                    onChange={handleInputChange}
+                    required
+                  >
+                    <option value="" disabled hidden>
+                      Silakan Pilih
+                    </option>
+                    <option value="Iya">Iya</option>
+                    <option value="Tidak">Tidak</option>
+                  </Form.Select>
+                  <Form.Control.Feedback type="invalid">
+                    Filter Belum Dipilih
+                  </Form.Control.Feedback>
+                  <Form.Label className="labelTutor">
+                    Contoh Filter bisa dilihat{" "}
+                    <a
+                      className="tutor"
+                      href="https://www.youtube.com/watch?v=07ihVwltHvQ"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Disini
+                    </a>
+                  </Form.Label>
+                </Form.Group>
+                {visibleFilter && (
+                  <Form.Group>
+                    <Form.Group className="mt-1">
+                      <Form.Label className="labelForm">
+                        Tema Filter Instagram
+                      </Form.Label>
+                      <Form.Select
+                        name="filterig"
+                        value={values.filterig}
+                        onChange={handleInputChange}
+                        required
+                      >
+                        <option value="" hidden>
+                          Silakan Pilih Filter
+                        </option>
+                        <option value="Filter Wedding P">
+                          Filter Wedding P
+                        </option>
+                        <option value="Filter Wedding Q">
+                          Filter Wedding Q
+                        </option>
+                        <option value="Filter Wedding W">
+                          Filter Wedding W
+                        </option>
+                        <option value="Filter Wedding X">
+                          Filter Wedding X
+                        </option>
+                        <option value="Filter Wedding Y">
+                          Filter Wedding Y
+                        </option>
+                        <option value="Filter Wedding Z">
+                          Filter Wedding Z
+                        </option>
+                        <option value="Filter Wedding AA">
+                          Filter Wedding AA
+                        </option>
+                        <option value="Filter Wedding AC">
+                          Filter Wedding AC
+                        </option>
+                        <option value="Filter Wedding AD">
+                          Filter Wedding AD
+                        </option>
+                        <option value="Filter Wedding AE">
+                          Filter Wedding AE
+                        </option>
+                        <option value="Filter Wedding 01">
+                          Filter Wedding 01
+                        </option>
+                        <option value="Filter Wedding 02">
+                          Filter Wedding 02
+                        </option>
+                        <option value="Filter Wedding Jawa">
+                          Filter Wedding Jawa
+                        </option>
+                      </Form.Select>
+                      <Form.Control.Feedback type="invalid">
+                        Filter Belum Dipilih
+                      </Form.Control.Feedback>
+                    </Form.Group>
+
+                    <Form.Group>
+                      <Form.Label className="labelForm">Pilih Frame</Form.Label>
+                      <Form.Select
+                        name="frame"
+                        value={values.frame}
+                        onChange={handleInputChange}
+                        required
+                      >
+                        <option value="" disabled hidden>
+                          Pilih
+                        </option>
+                        <option value="Frame 1">Frame 1</option>
+                        <option value="Frame 1 dan 2">Frame 1 dan 2</option>
+                        <option value="Frame 1, 2 dan 3">
+                          Frame 1, 2 dan 3
+                        </option>
+                      </Form.Select>
+                      <Form.Control.Feedback type="invalid">
+                        Frame Belum Dipilih
+                      </Form.Control.Feedback>
+                    </Form.Group>
+                  </Form.Group>
+                )}
 
                 <Form.Group className="mb-2">
                   <Form.Label className="labelForm">
