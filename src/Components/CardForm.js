@@ -116,14 +116,14 @@ export default function CardForm(props) {
           "https://api.whatsapp.com/send/?phone=6281215372042&text=" +
           "1. Tema Undangan Video/Jpeg : " +
           values.temaVideo +
-          "%0a%0a2. Tema Undangan Website : " +
-          values.temaWebsite +
-          "%0a%0a3. Bahasa Undangan : " +
-          values.bahasa +
-          "%0a%0a4. Paket Undangan Video/Jpeg : " +
+          "%0a%0a2. Paket Undangan Video/Jpeg : " +
           values.paketVideo +
-          "%0a%0a5. Paket Undangan Website : " +
+          "%0a%0a3. Tema Undangan Website : " +
+          values.temaWebsite +
+          "%0a%0a4. Paket Undangan Website : " +
           values.paketWebsite +
+          "%0a%0a5. Bahasa Undangan Website: " +
+          values.bahasa +
           "%0a%0a6. Filter Instagram : " +
           values.pakaiFilter +
           filter +
@@ -190,25 +190,7 @@ export default function CardForm(props) {
           temp +
           "%0a%0a2. Live Streaming : " +
           values.live +
-          "%0a%0a3. Wedding Gift Video/Jpeg%0a%0a-Amplop Digital 1%0a-Nomor Rekening 1 : " +
-          values.nomorRekVideo +
-          "%0a-Nama Bank 1 : " +
-          values.namaBankVideo +
-          "%0a-Atas Nama 1 : " +
-          values.atasNamaVideo +
-          "%0a%0a-Amplop Digital 2%0a-Nomor Rekening 2 : " +
-          values.nomorRekVideo2 +
-          "%0a-Nama Bank 2 : " +
-          values.namaBankVideo2 +
-          "%0a-Atas Nama 2 : " +
-          values.atasNamaVideo2 +
-          "%0a%0a-Kirim Hadiah%0a-Alamat : " +
-          values.alamatVideo +
-          "%0a-Nama Penerima : " +
-          values.namaPenerimaVideo +
-          "%0a-WA Konfirmasi Amplop/Penerima : " +
-          values.waKonfirmasiVideo +
-          "%0a%0a Wedding Gift %0a%0a-Amplop Digital 1%0a-Nomor Rekening 1 : " +
+          "%0a%0a3. Wedding Gift %0a%0a-Amplop Digital 1%0a-Nomor Rekening 1 : " +
           values.nomorRek +
           "%0a-Nama Bank 1 : " +
           values.namaBank +
@@ -236,14 +218,14 @@ export default function CardForm(props) {
           "https://api.whatsapp.com/send/?phone=6281215372042&text=" +
           "1. Tema Undangan Video/Jpeg : " +
           values.temaVideo +
-          "%0a%0a2. Tema Undangan Website: " +
-          values.temaWebsite +
-          "%0a%0a3. Bahasa Undangan: " +
-          values.bahasa +
-          "%0a%0a4. Paket Undangan Video/Jpeg : " +
+          "%0a%0a2. Paket Undangan Video/Jpeg : " +
           values.paketVideo +
-          "%0a%0a5. Paket Undangan Website : " +
+          "%0a%0a3. Tema Undangan Website: " +
+          values.temaWebsite +
+          "%0a%0a4. Paket Undangan Website : " +
           values.paketWebsite +
+          "%0a%0a5. Bahasa Undangan Website : " +
+          values.bahasa +
           "%0a%0a6. Filter Instagram : " +
           values.pakaiFilter +
           filter +
@@ -485,6 +467,39 @@ export default function CardForm(props) {
                 </Form.Group>
                 <Form.Group className="mb-2">
                   <Form.Label className="labelForm">
+                    Paket Undangan Video/Jpeg
+                  </Form.Label>
+                  <Form.Select
+                    name="paketVideo"
+                    value={values.paketVideo}
+                    onChange={handleInputChange}
+                    required
+                  >
+                    <option value="" hidden>
+                      Silakan Pilih Paket
+                    </option>
+                    <option value="Gambar/Jpeg">Gambar/Jpeg</option>
+                    <option value="Video 15/30 detik">Video 15/30 detik</option>
+                    <option value="Video 60 detik">Video 60 detik</option>
+                    <option value="Paket Hemat 1 (Video 15/30 detik dan Jpeg)">
+                      Paket Hemat 1 (Video 15/30 detik & Jpeg)
+                    </option>
+                    <option value="Paket Hemat 2 (Video 60 detik dan Jpeg)">
+                      Paket Hemat 2 (Video 60 detik & Jpeg)
+                    </option>
+                    <option value="Paket Hemat 3 (Video 60 detik dan Video 15/30 detik)">
+                      Paket Hemat 3 (Video 60 detik & Video 15/30 detik)
+                    </option>
+                    <option value="Paket Hemat 4 (Video 60 detik dan Video 15/30 detik dan Jpeg)">
+                      Paket Hemat 4 (Video 60 detik & Video 15/30 detik & Jpeg)
+                    </option>
+                  </Form.Select>
+                  <Form.Control.Feedback type="invalid">
+                    Paket Belum Dipilih
+                  </Form.Control.Feedback>
+                </Form.Group>
+                <Form.Group className="mb-2">
+                  <Form.Label className="labelForm">
                     Tema Undangan Website
                   </Form.Label>
                   <Form.Select
@@ -522,59 +537,6 @@ export default function CardForm(props) {
                 </Form.Group>
 
                 <Form.Group className="mb-2">
-                  <Form.Label className="labelForm">Bahasa Undangan</Form.Label>
-                  <Form.Select
-                    name="bahasa"
-                    value={values.bahasa}
-                    onChange={handleInputChange}
-                    required
-                  >
-                    <option value="" disabled hidden>
-                      Silakan Pilih Bahasa
-                    </option>
-                    <option value="Indonesia">Indonesia</option>
-                    <option value="Inggris">Inggris</option>
-                  </Form.Select>
-                  <Form.Control.Feedback type="invalid">
-                    Bahasa Belum Dipilih
-                  </Form.Control.Feedback>
-                </Form.Group>
-
-                <Form.Group className="mb-2">
-                  <Form.Label className="labelForm">
-                    Paket Undangan Video/Jpeg
-                  </Form.Label>
-                  <Form.Select
-                    name="paketVideo"
-                    value={values.paketVideo}
-                    onChange={handleInputChange}
-                    required
-                  >
-                    <option value="" hidden>
-                      Silakan Pilih Paket
-                    </option>
-                    <option value="Gambar/Jpeg">Gambar/Jpeg</option>
-                    <option value="Video 15/30 detik">Video 15/30 detik</option>
-                    <option value="Video 60 detik">Video 60 detik</option>
-                    <option value="Paket Hemat 1 (Video 15/30 detik dan Jpeg)">
-                      Paket Hemat 1 (Video 15/30 detik & Jpeg)
-                    </option>
-                    <option value="Paket Hemat 2 (Video 60 detik dan Jpeg)">
-                      Paket Hemat 2 (Video 60 detik & Jpeg)
-                    </option>
-                    <option value="Paket Hemat 3 (Video 60 detik dan Video 15/30 detik)">
-                      Paket Hemat 3 (Video 60 detik & Video 15/30 detik)
-                    </option>
-                    <option value="Paket Hemat 4 (Video 60 detik dan Video 15/30 detik dan Jpeg)">
-                      Paket Hemat 4 (Video 60 detik & Video 15/30 detik & Jpeg)
-                    </option>
-                  </Form.Select>
-                  <Form.Control.Feedback type="invalid">
-                    Paket Belum Dipilih
-                  </Form.Control.Feedback>
-                </Form.Group>
-
-                <Form.Group className="mb-2">
                   <Form.Label className="labelForm">
                     Paket Undangan Website
                   </Form.Label>
@@ -593,6 +555,26 @@ export default function CardForm(props) {
                   </Form.Select>
                   <Form.Control.Feedback type="invalid">
                     Paket Belum Dipilih
+                  </Form.Control.Feedback>
+                </Form.Group>
+                <Form.Group className="mb-2">
+                  <Form.Label className="labelForm">
+                    Bahasa Undangan Website
+                  </Form.Label>
+                  <Form.Select
+                    name="bahasa"
+                    value={values.bahasa}
+                    onChange={handleInputChange}
+                    required
+                  >
+                    <option value="" disabled hidden>
+                      Silakan Pilih Bahasa
+                    </option>
+                    <option value="Indonesia">Indonesia</option>
+                    <option value="Inggris">Inggris</option>
+                  </Form.Select>
+                  <Form.Control.Feedback type="invalid">
+                    Bahasa Belum Dipilih
                   </Form.Control.Feedback>
                 </Form.Group>
 
@@ -1486,330 +1468,160 @@ export default function CardForm(props) {
                         <Accordion.Body>
                           <Accordion flush>
                             <Accordion.Item eventKey="0">
-                              <Accordion.Header>
-                                <i className="bi bi bi-box2 me-2"></i>
-                                <div>Wedding Gift Video/Jpeg</div>
-                              </Accordion.Header>
-                              <Accordion.Body>
-                                <Accordion flush>
-                                  <Accordion.Item eventKey="0">
-                                    <Accordion.Header>
-                                      <i className="bi bi-envelope me-2"></i>
-                                      Amplop Digital 1
-                                    </Accordion.Header>
-                                    <Accordion.Body>
-                                      <FloatingLabel
-                                        controlId="floatingInput"
-                                        label="Nomor Rekening"
-                                        className="mb-3"
-                                      >
-                                        <Form.Control
-                                          name="nomorRekVideo"
-                                          value={values.nomorRekVideo}
-                                          onChange={handleInputChange}
-                                          type="text"
-                                          placeholder="Nomor Rekening"
-                                        />
-                                      </FloatingLabel>
-                                      <FloatingLabel
-                                        controlId="floatingInput"
-                                        label="Nama Bank"
-                                        className="mb-3"
-                                      >
-                                        <Form.Control
-                                          name="namaBankVideo"
-                                          value={values.namaBankVideo}
-                                          onChange={handleInputChange}
-                                          type="text"
-                                          placeholder="Nama Bank"
-                                        />
-                                      </FloatingLabel>
-                                      <FloatingLabel
-                                        controlId="floatingInput"
-                                        label="Atas Nama"
-                                        className="mb-3"
-                                      >
-                                        <Form.Control
-                                          name="atasNamaVideo"
-                                          value={capitalFirstWord(
-                                            values.atasNamaVideo
-                                          )}
-                                          onChange={handleInputChange}
-                                          type="text"
-                                          placeholder="Atas Nama Bank"
-                                        />
-                                      </FloatingLabel>
-                                    </Accordion.Body>
-                                  </Accordion.Item>
-                                  <Accordion.Item eventKey="0">
-                                    <Accordion.Header>
-                                      <i className="bi bi-envelope me-2"></i>
-                                      Amplop Digital 2
-                                    </Accordion.Header>
-                                    <Accordion.Body>
-                                      <FloatingLabel
-                                        controlId="floatingInput"
-                                        label="Nomor Rekening"
-                                        className="mb-3"
-                                      >
-                                        <Form.Control
-                                          name="nomorRekVideo2"
-                                          value={values.nomorRekVideo2}
-                                          onChange={handleInputChange}
-                                          type="text"
-                                          placeholder="Nomor Rekening"
-                                        />
-                                      </FloatingLabel>
-                                      <FloatingLabel
-                                        controlId="floatingInput"
-                                        label="Nama Bank"
-                                        className="mb-3"
-                                      >
-                                        <Form.Control
-                                          name="namaBankVideo2"
-                                          value={values.namaBankVideo2}
-                                          onChange={handleInputChange}
-                                          type="text"
-                                          placeholder="Nama Bank"
-                                        />
-                                      </FloatingLabel>
-                                      <FloatingLabel
-                                        controlId="floatingInput"
-                                        label="Atas Nama"
-                                        className="mb-3"
-                                      >
-                                        <Form.Control
-                                          name="atasNamaVideo2"
-                                          value={capitalFirstWord(
-                                            values.atasNamaVideo2
-                                          )}
-                                          onChange={handleInputChange}
-                                          type="text"
-                                          placeholder="Atas Nama Bank"
-                                        />
-                                      </FloatingLabel>
-                                    </Accordion.Body>
-                                  </Accordion.Item>
-                                </Accordion>
-                                <Accordion flush>
-                                  <Accordion.Item eventKey="0">
-                                    <Accordion.Header>
-                                      <i className="bi bi-gift me-2"></i>Kirim
-                                      Hadiah
-                                    </Accordion.Header>
-                                    <Accordion.Body>
-                                      <FloatingLabel
-                                        controlId="floatingInput"
-                                        label="Alamat"
-                                        className="mb-3"
-                                      >
-                                        <Form.Control
-                                          name="alamatVideo"
-                                          value={values.alamatVideo}
-                                          onChange={handleInputChange}
-                                          type="text"
-                                          placeholder="Alamat"
-                                        />
-                                      </FloatingLabel>
-                                      <FloatingLabel
-                                        controlId="floatingInput"
-                                        label="Nama Penerima"
-                                        className="mb-3"
-                                      >
-                                        <Form.Control
-                                          name="namaPenerimaVideo"
-                                          value={capitalFirstWord(
-                                            values.namaPenerimaVideo
-                                          )}
-                                          onChange={handleInputChange}
-                                          type="text"
-                                          placeholder="Nama Penerima"
-                                        />
-                                      </FloatingLabel>
-                                    </Accordion.Body>
-                                  </Accordion.Item>
-                                </Accordion>
-                                <FloatingLabel
-                                  controlId="floatingInput"
-                                  label="Nomor WA Konfirmasi "
-                                  className="mt-3"
-                                >
-                                  <Form.Control
-                                    name="waKonfirmasiVideo"
-                                    value={values.waKonfirmasiVideo}
-                                    onChange={handleInputChange}
-                                    type="text"
-                                    placeholder="Masukan Nomor"
-                                  />
-                                  <Form.Control.Feedback type="invalid">
-                                    Nomor Belum Diisi
-                                  </Form.Control.Feedback>
-                                </FloatingLabel>
-                              </Accordion.Body>
-                            </Accordion.Item>
-                          </Accordion>
-                          <Accordion flush>
-                            <Accordion.Item eventKey="0">
-                              <Accordion.Header>
-                                <i className="bi bi bi-box2 me-2"></i>
-                                <div>Wedding Gift Website</div>
-                              </Accordion.Header>
-                              <Accordion.Body>
-                                <Accordion flush>
-                                  <Accordion.Item eventKey="0">
-                                    <Accordion.Header>
-                                      <i className="bi bi-envelope me-2"></i>
-                                      Amplop Digital 1
-                                    </Accordion.Header>
-                                    <Accordion.Body>
-                                      <FloatingLabel
-                                        controlId="floatingInput"
-                                        label="Nomor Rekening"
-                                        className="mb-3"
-                                      >
-                                        <Form.Control
-                                          name="nomorRek"
-                                          value={values.nomorRek}
-                                          onChange={handleInputChange}
-                                          type="text"
-                                          placeholder="Nomor Rekening"
-                                        />
-                                      </FloatingLabel>
-                                      <FloatingLabel
-                                        controlId="floatingInput"
-                                        label="Nama Bank"
-                                        className="mb-3"
-                                      >
-                                        <Form.Control
-                                          name="namaBank"
-                                          value={values.namaBank}
-                                          onChange={handleInputChange}
-                                          type="text"
-                                          placeholder="Nama Bank"
-                                        />
-                                      </FloatingLabel>
-                                      <FloatingLabel
-                                        controlId="floatingInput"
-                                        label="Atas Nama"
-                                        className="mb-3"
-                                      >
-                                        <Form.Control
-                                          name="atasNama"
-                                          value={capitalFirstWord(
-                                            values.atasNama
-                                          )}
-                                          onChange={handleInputChange}
-                                          type="text"
-                                          placeholder="Atas Nama Bank"
-                                        />
-                                      </FloatingLabel>
-                                    </Accordion.Body>
-                                  </Accordion.Item>
-                                  <Accordion.Item eventKey="0">
-                                    <Accordion.Header>
-                                      <i className="bi bi-envelope me-2"></i>
-                                      Amplop Digital 2
-                                    </Accordion.Header>
-                                    <Accordion.Body>
-                                      <FloatingLabel
-                                        controlId="floatingInput"
-                                        label="Nomor Rekening"
-                                        className="mb-3"
-                                      >
-                                        <Form.Control
-                                          name="nomorRek2"
-                                          value={values.nomorRek2}
-                                          onChange={handleInputChange}
-                                          type="text"
-                                          placeholder="Nomor Rekening"
-                                        />
-                                      </FloatingLabel>
-                                      <FloatingLabel
-                                        controlId="floatingInput"
-                                        label="Nama Bank"
-                                        className="mb-3"
-                                      >
-                                        <Form.Control
-                                          name="namaBank2"
-                                          value={values.namaBank2}
-                                          onChange={handleInputChange}
-                                          type="text"
-                                          placeholder="Nama Bank"
-                                        />
-                                      </FloatingLabel>
-                                      <FloatingLabel
-                                        controlId="floatingInput"
-                                        label="Atas Nama"
-                                        className="mb-3"
-                                      >
-                                        <Form.Control
-                                          name="atasNama2"
-                                          value={capitalFirstWord(
-                                            values.atasNama2
-                                          )}
-                                          onChange={handleInputChange}
-                                          type="text"
-                                          placeholder="Atas Nama Bank"
-                                        />
-                                      </FloatingLabel>
-                                    </Accordion.Body>
-                                  </Accordion.Item>
-                                </Accordion>
-                                <Accordion flush>
-                                  <Accordion.Item eventKey="0">
-                                    <Accordion.Header>
-                                      <i className="bi bi-gift me-2"></i>Kirim
-                                      Hadiah
-                                    </Accordion.Header>
-                                    <Accordion.Body>
-                                      <FloatingLabel
-                                        controlId="floatingInput"
-                                        label="Alamat"
-                                        className="mb-3"
-                                      >
-                                        <Form.Control
-                                          name="alamat"
-                                          value={values.alamat}
-                                          onChange={handleInputChange}
-                                          type="text"
-                                          placeholder="Alamat"
-                                        />
-                                      </FloatingLabel>
-                                      <FloatingLabel
-                                        controlId="floatingInput"
-                                        label="Nama Penerima"
-                                        className="mb-3"
-                                      >
-                                        <Form.Control
-                                          name="namaPenerima"
-                                          value={capitalFirstWord(
-                                            values.namaPenerima
-                                          )}
-                                          onChange={handleInputChange}
-                                          type="text"
-                                          placeholder="Nama Penerima"
-                                        />
-                                      </FloatingLabel>
-                                    </Accordion.Body>
-                                  </Accordion.Item>
-                                </Accordion>
-                                <FloatingLabel
-                                  controlId="floatingInput"
-                                  label="Nomor WA Konfirmasi "
-                                  className="mt-3"
-                                >
-                                  <Form.Control
-                                    name="waKonfirmasi"
-                                    value={values.waKonfirmasi}
-                                    onChange={handleInputChange}
-                                    type="text"
-                                    placeholder="Masukan Nomor"
-                                  />
-                                  <Form.Control.Feedback type="invalid">
-                                    Nomor Belum Diisi
-                                  </Form.Control.Feedback>
-                                </FloatingLabel>
-                              </Accordion.Body>
+                              <Accordion flush>
+                                <Accordion.Item eventKey="0">
+                                  <Accordion.Header>
+                                    <i className="bi bi-envelope me-2"></i>
+                                    Amplop Digital 1
+                                  </Accordion.Header>
+                                  <Accordion.Body>
+                                    <FloatingLabel
+                                      controlId="floatingInput"
+                                      label="Nomor Rekening"
+                                      className="mb-3"
+                                    >
+                                      <Form.Control
+                                        name="nomorRek"
+                                        value={values.nomorRek}
+                                        onChange={handleInputChange}
+                                        type="text"
+                                        placeholder="Nomor Rekening"
+                                      />
+                                    </FloatingLabel>
+                                    <FloatingLabel
+                                      controlId="floatingInput"
+                                      label="Nama Bank"
+                                      className="mb-3"
+                                    >
+                                      <Form.Control
+                                        name="namaBank"
+                                        value={values.namaBank}
+                                        onChange={handleInputChange}
+                                        type="text"
+                                        placeholder="Nama Bank"
+                                      />
+                                    </FloatingLabel>
+                                    <FloatingLabel
+                                      controlId="floatingInput"
+                                      label="Atas Nama"
+                                      className="mb-3"
+                                    >
+                                      <Form.Control
+                                        name="atasNama"
+                                        value={capitalFirstWord(
+                                          values.atasNama
+                                        )}
+                                        onChange={handleInputChange}
+                                        type="text"
+                                        placeholder="Atas Nama Bank"
+                                      />
+                                    </FloatingLabel>
+                                  </Accordion.Body>
+                                </Accordion.Item>
+                                <Accordion.Item eventKey="0">
+                                  <Accordion.Header>
+                                    <i className="bi bi-envelope me-2"></i>
+                                    Amplop Digital 2
+                                  </Accordion.Header>
+                                  <Accordion.Body>
+                                    <FloatingLabel
+                                      controlId="floatingInput"
+                                      label="Nomor Rekening"
+                                      className="mb-3"
+                                    >
+                                      <Form.Control
+                                        name="nomorRek2"
+                                        value={values.nomorRek2}
+                                        onChange={handleInputChange}
+                                        type="text"
+                                        placeholder="Nomor Rekening"
+                                      />
+                                    </FloatingLabel>
+                                    <FloatingLabel
+                                      controlId="floatingInput"
+                                      label="Nama Bank"
+                                      className="mb-3"
+                                    >
+                                      <Form.Control
+                                        name="namaBank2"
+                                        value={values.namaBank2}
+                                        onChange={handleInputChange}
+                                        type="text"
+                                        placeholder="Nama Bank"
+                                      />
+                                    </FloatingLabel>
+                                    <FloatingLabel
+                                      controlId="floatingInput"
+                                      label="Atas Nama"
+                                      className="mb-3"
+                                    >
+                                      <Form.Control
+                                        name="atasNama2"
+                                        value={capitalFirstWord(
+                                          values.atasNama2
+                                        )}
+                                        onChange={handleInputChange}
+                                        type="text"
+                                        placeholder="Atas Nama Bank"
+                                      />
+                                    </FloatingLabel>
+                                  </Accordion.Body>
+                                </Accordion.Item>
+                              </Accordion>
+                              <Accordion flush>
+                                <Accordion.Item eventKey="0">
+                                  <Accordion.Header>
+                                    <i className="bi bi-gift me-2"></i>Kirim
+                                    Hadiah
+                                  </Accordion.Header>
+                                  <Accordion.Body>
+                                    <FloatingLabel
+                                      controlId="floatingInput"
+                                      label="Alamat"
+                                      className="mb-3"
+                                    >
+                                      <Form.Control
+                                        name="alamat"
+                                        value={values.alamat}
+                                        onChange={handleInputChange}
+                                        type="text"
+                                        placeholder="Alamat"
+                                      />
+                                    </FloatingLabel>
+                                    <FloatingLabel
+                                      controlId="floatingInput"
+                                      label="Nama Penerima"
+                                      className="mb-3"
+                                    >
+                                      <Form.Control
+                                        name="namaPenerima"
+                                        value={capitalFirstWord(
+                                          values.namaPenerima
+                                        )}
+                                        onChange={handleInputChange}
+                                        type="text"
+                                        placeholder="Nama Penerima"
+                                      />
+                                    </FloatingLabel>
+                                  </Accordion.Body>
+                                </Accordion.Item>
+                              </Accordion>
+                              <FloatingLabel
+                                controlId="floatingInput"
+                                label="Nomor WA Konfirmasi "
+                                className="mt-3"
+                              >
+                                <Form.Control
+                                  name="waKonfirmasi"
+                                  value={values.waKonfirmasi}
+                                  onChange={handleInputChange}
+                                  type="text"
+                                  placeholder="Masukan Nomor"
+                                />
+                                <Form.Control.Feedback type="invalid">
+                                  Nomor Belum Diisi
+                                </Form.Control.Feedback>
+                              </FloatingLabel>
                             </Accordion.Item>
                           </Accordion>
                         </Accordion.Body>
