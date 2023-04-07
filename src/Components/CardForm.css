@@ -50,7 +50,15 @@ height:45px;
     content:"*" ;
     color:red   
     }
-
+.labelFormFilter{
+    display: flex;
+    font-size: small;
+    font-style: italic;
+}
+.labelFormFilter::before{
+    content:"*" ;
+    }
+    
 .linkFoto{
     margin: 4px 0;
 }
