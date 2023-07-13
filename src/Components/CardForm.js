@@ -124,11 +124,11 @@ export default function CardForm(props) {
           values.paketWebsite +
           "%0a%0a5. Bahasa Undangan Website: " +
           values.bahasa +
-          "%0a%0a6. Filter Instagram : " +
+          "%0a%0a6. Foto Undangan : " +
+          values.foto +
+          "%0a%0a7. Filter Instagram : " +
           values.pakaiFilter +
           filter +
-          "%0a%0a7. Penggunaan Foto : " +
-          values.foto +
           "%0a%0a8. Nama yang didahulukan : " +
           values.namaAwal +
           "%0a%0a9. Barcode : " +
@@ -226,11 +226,11 @@ export default function CardForm(props) {
           values.paketWebsite +
           "%0a%0a5. Bahasa Undangan Website : " +
           values.bahasa +
-          "%0a%0a6. Filter Instagram : " +
+          "%0a%0a6. Foto Undangan: " +
+          values.foto +
+          "%0a%0a7. Filter Instagram : " +
           values.pakaiFilter +
           filter +
-          "%0a%0a7. Penggunaan Foto : " +
-          values.foto +
           "%0a%0a8. Nama yang didahulukan : " +
           values.namaAwal +
           "%0a%0a9. Barcode : " +
@@ -361,8 +361,8 @@ export default function CardForm(props) {
     } else {
       setDataResepsi("%0a-Acara : " + values.namaAcaraResepsi);
     }
-    if (!!values.nomorCatin) {
-      setNoCatin("%0a-Nomor Calon Pengantin : " + values.nomorCatin);
+    if (e.target.name === "nomorCatin") {
+      setNoCatin("%0a-Nomor Calon Pengantin : " + e.target.value);
     }
     if (!!values.linkBarcode) {
       setLBarcode("%0a-Link Barcode : " + values.linkBarcode);
@@ -578,6 +578,26 @@ export default function CardForm(props) {
                   </Form.Control.Feedback>
                 </Form.Group>
 
+                <Form.Group className="mb-2">
+                  <Form.Label className="labelForm">Foto Undangan</Form.Label>
+                  <Form.Select
+                    name="foto"
+                    value={values.foto}
+                    onChange={handleInputChange}
+                    required
+                  >
+                    <option value="" hidden>
+                      Pilih
+                    </option>
+                    <option value="Dengan Foto">Dengan Foto</option>
+                    <option value="Tanpa Foto">Tanpa Foto</option>
+                    <option value="Animasi">Animasi</option>
+                  </Form.Select>
+                  <Form.Control.Feedback type="invalid">
+                    Foto Belum Dipilih
+                  </Form.Control.Feedback>
+                </Form.Group>
+
                 <Form.Group>
                   <Form.Label className="mb-0">Filter Instagram</Form.Label>
                   <Form.Label className="labelFormFilter">
@@ -692,28 +712,6 @@ export default function CardForm(props) {
                     </Form.Group>
                   </Form.Group>
                 )}
-
-                <Form.Group className="mb-2">
-                  <Form.Label className="labelForm">
-                    Menggunakan Foto
-                  </Form.Label>
-                  <Form.Select
-                    name="foto"
-                    value={values.foto}
-                    onChange={handleInputChange}
-                    required
-                  >
-                    <option value="" hidden>
-                      Pilih
-                    </option>
-                    <option value="Dengan Foto">Dengan Foto</option>
-                    <option value="Tanpa Foto">Tanpa Foto</option>
-                    <option value="Animasi">Animasi</option>
-                  </Form.Select>
-                  <Form.Control.Feedback type="invalid">
-                    Foto Belum Dipilih
-                  </Form.Control.Feedback>
-                </Form.Group>
 
                 <Form.Group className="mb-2">
                   <Form.Label className="labelForm">
