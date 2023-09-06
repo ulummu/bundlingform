@@ -8,16 +8,16 @@
     .Card{
         width: 100%;
     }
-   
     .formTambah{
         margin-top: 10px;
     }
 }
 @media screen and (max-width: 540px){
- .formTanggal{
-        margin-top: 10px;
-    }
-}
+    .formTanggal{
+           margin-top: 10px;
+       }
+   }
+
 .logo{
 width:unset;
 height:45px;
@@ -58,7 +58,7 @@ height:45px;
 .labelFormFilter::before{
     content:"*" ;
     }
-    
+
 .linkFoto{
     margin: 4px 0;
 }
